@@ -1,9 +1,43 @@
 package mysqlapp.business;
 
-public class Product {
+import java.io.Serializable; 
 
-	public Product() {
-		// TODO Auto-generated constructor stub
+public class Product implements Serializable{
+	private static final long serialVersionUID = 1L;
+
+	private int id;
+	private String name;
+	private int price;
+	
+	public Product() {}
+	public Product(String name, int price) {
+		this.name = name;
+		this.price = price;
 	}
-
+	public Product(int id, String name, int price) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public int getPrice() {
+		return price;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setPrie(int price) {
+		this.price = price;
+	}
+	
+	
 }
